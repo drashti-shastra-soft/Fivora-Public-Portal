@@ -1,0 +1,383 @@
+﻿@{
+    var canonicalUrl = $"{Context.Request.Scheme}://{Context.Request.Host}{Context.Request.Path}";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <meta name="keywords" content="@ViewBag.MetaKeywords" />
+    <meta name="description" content="@ViewBag.MetaDescription" />
+    <link rel="canonical" href="@Html.Raw(canonicalUrl)" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/responsive.css" rel="stylesheet" />
+    <link href="~/css/sitefonts.css" rel="stylesheet" />
+    <link href="~/css/owl.carousel.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/ico" sizes="16x16" href="~/favicon.ico">
+
+    <script type="application/ld+json">
+        {
+          "@@context": "https://schema.org",
+          "@@type": "Organization",
+          "name": "Fivora Group",
+          "url": "http://fivoragroup.in",
+          "logo": "http://fivoragroup.in/images/fivoragrouplogo.png",
+          "email": "info@fivoragroup.in",
+          "telephone": "+91 63573 12993",
+          "address": {
+            "@@type": "PostalAddress",
+            "streetAddress": "227, Sumeru Business Corner, Nr.Radisson Hotel, Rajhans Cinema Road, Pal, Adajan",
+            "addressLocality": "Surat",
+            "addressRegion": "Gujarat",
+            "postalCode": "395009",
+            "addressCountry": "IN"
+          },
+          "sameAs": [
+            "https://www.facebook.com/",
+            "https://www.instagram.com/",
+            "https://www.linkedin.com/"
+          ],
+          "description": "Fivora Group provides expert financial solutions including loans, insurance, investments, and business opportunities in Surat.",
+          "contactPoint": {
+            "@@type": "ContactPoint",
+            "telephone": "+91 63573 12993",
+            "contactType": "customer service",
+            "areaServed": "IN",
+            "availableLanguage": "en"
+          },
+          "service": [
+            {
+              "@@type": "FinancialProduct",
+              "name": "Loan Services",
+              "serviceType": "Loan",
+              "provider": {
+                "@@type": "Organization",
+                "name": "Fivora Group"
+              },
+              "subService": [
+                { "name": "Home Loan" },
+                { "name": "Mortgage Loan" },
+                { "name": "Mudra Loan" },
+                { "name": "Used Car Loan" },
+                { "name": "OD & CC Loans" },
+                { "name": "Business Loan" },
+                { "name": "Personal Loan" }
+              ]
+            },
+            {
+              "@@type": "FinancialProduct",
+              "name": "Insurance Services",
+              "serviceType": "Insurance",
+              "provider": {
+                "@@type": "Organization",
+                "name": "Fivora Group"
+              },
+              "subService": [
+                {
+                  "name": "General Insurance",
+                  "subSubService": [
+                    { "name": "Health Insurance" },
+                    { "name": "Car Insurance" },
+                    { "name": "Fire Insurance" },
+                    { "name": "Property Insurance" }
+                  ]
+                },
+                {
+                  "name": "Life Insurance",
+                  "subSubService": [
+                    { "name": "Business Insurance" },
+                    { "name": "Term Insurance" },
+                    { "name": "Child Edu Insurance" },
+                    { "name": "Retirement Insurance" }
+                  ]
+                }
+              ]
+            },
+            {
+              "@@type": "FinancialProduct",
+              "name": "Investment Services",
+              "serviceType": "Investment",
+              "provider": {
+                "@@type": "Organization",
+                "name": "Fivora Group"
+              },
+              "subService": [
+                { "name": "Mutual Funds" },
+                { "name": "Real Estate" }
+              ]
+            },
+            {
+              "@@type": "FinancialService",
+              "name": "Business Opportunities",
+              "serviceType": "Business Consulting",
+              "provider": {
+                "@@type": "Organization",
+                "name": "Fivora Group"
+              },
+              "subService": [
+                { "name": "Insurance Distributorship" },
+                { "name": "E-Vehicle Distributorship" }
+              ]
+            }
+          ]
+        }
+    </script>
+</head>
+
+<body>
+    <header class="FivoraHeader">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="@Url.Action("Index","Home")">
+                    <img src="~/images/fivoragrouplogo.png" alt="Fivora Group Logo" class="img-fluid" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Index","Home")">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Aboutus","Home")">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="@Url.Action("Loanservices","Home")">Loan</a>
+                                <a class="dropdown-item" href="@Url.Action("Insurance","Home")">Insurance</a>
+                                <a class="dropdown-item" href="@Url.Action("Investment","Home")">Investment</a>
+                                <a class="dropdown-item" href="@Url.Action("Businessopportunities","Home")">Business Opportunities</a>
+                            </div>
+                        </li>
+                        @* <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Projects","Home")">Projects</a>
+                        </li> *@
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Contactus","Home")">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="buttonWrapper">
+                        <a href="tel:+916357312993" class="myButton">
+                            Get a Consultation <i class="fas fa-phone-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer class="footerSection">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <div class="WrapperContainer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footerLogo">
+                            <h3>Our Company</h3>
+                            <p>We’re always here to assist you with any questions, feedback, or inquiries – feel free to reach out, and we’ll get back to you as soon as possible!</p>
+                            <ul>
+                                <li><a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="http://google.com/" target="_blank" class="gsearch"><i class="fab fa-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="footerHeading">
+                            <h3>Quick Access</h3>
+                            <ul>
+                                <li><a href="@Url.Action("Loanservices", "Home")"><i class="fas fa-angle-right"></i>Loan</a></li>
+                                <li><a href="@Url.Action("Insurance", "Home")"><i class="fas fa-angle-right"></i>Insurance</a></li>
+                                <li><a href="@Url.Action("Investment", "Home")"><i class="fas fa-angle-right"></i>Investment</a></li>
+                                <li><a href="@Url.Action("Businessopportunities", "Home")"><i class="fas fa-angle-right"></i>Business Opportunities</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="Addressbar">
+                            <h3>Registered Office</h3>
+                            <ul>
+                                <li><a href="mailto:info@fivoragroup.in"><i class="far fa-envelope"></i>info@fivoragroup.in</a></li>
+                                <li><a href="https://maps.app.goo.gl/sexe2QCGb8VqPENU9" target="_blank"><i class="fas fa-map-marker-alt"></i>227, Sumeru Business Corner, Nr. Radisson Hotel, Rajhans Cinema Road, Pal, Adajan, Surat- 395009</a></li>
+                                <li><a href="tel:+916357312993"><i class="fas fa-phone-alt"></i>+91 63573 12993</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section class="subFooter">
+        <div class="WrapperContainer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="pull-left">
+                            <p>Fivora Group © <span id="footerDate"></span>. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="pull-right">
+                            <p>Website by <a href="https://www.mitsolutions.in/" target="_blank">M iT Solutions</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @* <a href="https://wa.me/+916357312993" class="pulse" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a> *@
+
+    <div class="progress-container" id="progress-bar">0%</div>
+
+    <div class="MyLoader" id="lodeerloder">
+        <div class="loader3">
+            <img src="~/images/fivoragrouplogo.png" class="img-fluid" alt="Fivora Group logo" />
+        </div>
+    </div>
+
+
+    <script src="~/js/jquery-3.5.1.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/fontawesome.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        $( document ).ready(function() {
+            //Loader
+            $(window).on('load', function () {
+                $('#lodeerloder').addClass('hidden'); // Add the 'hidden' class to trigger fadeout animation
+            });
+            setTimeout(function () {
+                $('#lodeerloder').addClass('hidden');
+            }, 3000);
+
+            //Add fixed Class in Header
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('.FivoraHeader').addClass('fixed');
+                } else {
+                    $('.FivoraHeader').removeClass('fixed');
+                }
+            });
+
+            $('.FAQAccordian .card-header').on('click', function () {
+                var icon = $(this).find('.toggle-icon');
+
+                // First, reset all icons to plus
+                $('.FAQAccordian .toggle-icon').removeClass('fa-minus').addClass('fa-plus');
+
+                // Then toggle the clicked one if the related panel is not already shown
+                if (!$(this).next('.collapse').hasClass('show')) {
+                    icon.removeClass('fa-plus').addClass('fa-minus');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $('.experienceLane').owlCarousel({
+            items: 2,
+            lazyLoad: true,
+            loop: true,
+            autoplay: true,
+            gap: 10,
+            autoplayTimeout: 2500,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items:1
+                },
+                960: {
+                    items: 1
+                },
+                1200: {
+                    items:1
+                }
+            }
+        });
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function() {
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let progress = (scrollTop / scrollHeight) * 100;
+            let progressBar = document.getElementById("progress-bar");
+
+            // Show progress bar only after scrolling 100px
+            if (scrollTop > 100) {
+                progressBar.style.opacity = "1";
+                progressBar.style.visibility = "visible";
+            } else {
+                progressBar.style.opacity = "0";
+                progressBar.style.visibility = "hidden";
+            }
+
+            if (progress >= 100) {
+                progressBar.innerHTML = '<i class="fas fa-arrow-up"></i>';
+                progressBar.style.background = `#a3c940`; /* Full yellow when at 100% */
+                progressBar.querySelector("i").style.display = "block"; /* Show arrow icon */
+            } else {
+                progressBar.innerHTML = Math.round(progress) + "%";
+                progressBar.style.background = `conic-gradient(#a3c940 ${progress}%, #172a5a ${progress}%)`;
+            }
+        });
+
+        // Click to scroll back to top
+        document.getElementById("progress-bar").addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+    <script>
+        var d = new Date();
+        var n = d.getFullYear();
+        document.getElementById("footerDate").innerHTML = n;
+    </script>
+
+    <script>
+            document.addEventListener("DOMContentLoaded", function () {
+            const counters = document.querySelectorAll(".counter");
+
+            counters.forEach(counter => {
+                let target = +counter.getAttribute("data-target");
+
+                gsap.to(counter, {
+                    innerText: target,
+                    duration: 2, // Animation duration in seconds
+                    ease: "power2.out",
+                    snap: { innerText: 1 }, // Rounds the number
+                    onUpdate: function () {
+                        counter.innerText = Math.floor(counter.innerText);
+                    }
+                });
+            });
+        });
+    </script>
+
+    @* @await RenderSectionAsync("Scripts", required: false) *@
+</body>
+</html>

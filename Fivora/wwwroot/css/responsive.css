@@ -1,0 +1,240 @@
+@media (min-width: 320px) and (max-width: 575px) {
+    .FAQAccordian .card .card-header .fa-plus {
+        position: inherit;
+        right: 0;
+    }
+
+    .FAQAccordian .card .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .agentBox {
+        width: calc(100% - 0px);
+    }
+
+    .serviceTabs button.nav-link {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-gap {
+        padding: 70px 0;
+    }
+
+    .ContactSection .col-lg-4:last-child .contactBox {
+        margin-bottom: 0;
+    }
+
+    .breadcrumb-title {
+        font-size: 38px !important;
+    }
+
+    .FivoraHeader .navbar-brand img {
+        max-height: 60px;
+    }
+
+    .FivoraHeader .navbar-toggler {
+        height: 40px;
+        width: 40px;
+    }
+
+    .ourProcess .col-md-6:last-child .processBox {
+        margin-bottom: 0px;
+    }
+
+    .breadcrumb-title {
+        font-size: 58px;
+        line-height: normal
+    }
+
+    .layerImage img {
+        min-height: 250px;
+    }
+
+    .breadcrumbSetion {
+        padding: 150px 0 100px 0;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .agentBox {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 991px) {
+    .SliderSection .carousel-indicators {
+        display: flex;
+    }
+
+    .pull-left {
+        margin-bottom: 10px;
+    }
+
+        .pull-left p, .pull-right p {
+            text-align: center;
+        }
+
+    .footerHeading {
+        margin: 40px 0;
+    }
+
+    .headingBar h1 {
+        font-size: 36px;
+        line-height: normal;
+    }
+
+        .headingBar h1 span {
+            line-height: normal;
+        }
+
+    #setAlignment {
+        display: block;
+    }
+
+    .AboutMeSection img {
+        width: 100%;
+    }
+
+    #setAlignment .ParagraphSection {
+        margin-top: 50px;
+    }
+
+    .headingBar.WhiteText h1 {
+        font-size: 56px;
+        display: block;
+    }
+
+    .marginBottom100 {
+        margin-bottom: 50px;
+    }
+
+    .processBox.even {
+        margin-top: auto;
+    }
+
+    .processBox, .MissionVision {
+        margin-bottom: 30px;
+    }
+
+    .FAQAccordian .card {
+        width: 100%;
+    }
+
+    .FivoraCards {
+        width: 100%;
+    }
+
+    .SliderSection .carousel-item img {
+        min-height: 500px;
+    }
+
+    .OurServices #setJustifycenter {
+        margin-top: 50px;
+    }
+
+    .review-images, .review-desp {
+        display: none;
+    }
+
+    .SliderSection .carousel-caption, .sliderButton, .buttonWrapper::before, .contactBox {
+        display: none;
+    }
+
+    .ShowService {
+        margin-top: 25px;
+        padding-left: 0px;
+    }
+
+    .FivoraHeader .navbar-nav li a {
+        padding: 10px;
+        width: fit-content;
+    }
+
+    .buttonWrapper {
+        padding-left: 0px;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .footerLogo, .AboutMe {
+        padding-right: 0;
+    }
+
+    .serviceTabs .flex-column {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row !important;
+        gap: 10px;
+    }
+
+    .serviceTabs button.nav-link {
+        width: calc(50% - 5px);
+    }
+
+    .progress-container {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .contactBox {
+        margin-bottom: 50px;
+    }
+
+    .FivoraHeader .navbar-nav li.nav-item {
+        margin: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .section-gap {
+        padding: 70px 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .ManiHeader {
+        width: 100%;
+        border-radius: 0px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .WrapperContainer {
+        max-width: 1250px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1399px) {
+    .serviceBox {
+        padding: 30px;
+    }
+
+    .serviceTabs button.nav-link {
+        font-size: 16px;
+    }
+
+    .SliderSection .carousel-caption {
+        left: 50px;
+    }
+
+    .sliderButton .carousel-control-next {
+        top: 40% !important;
+    }
+
+    .breadcrumb-title {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 1399px) {
+}
+
+@media (min-width: 1400px) and (max-width: 1500px) {
+    .sliderButton .carousel-control-next {
+        top: 42% !important;
+    }
+}
